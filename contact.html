@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attractify-Infotech</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media1.html">
+  <link rel="shortcut icon" type="x-icon" href="images/main-logo.jpg">
+  <script src="../kit.fontawesome.com/64d58efce2.html" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../unpkg.com/aos%403.0.0-beta.6/dist/aos.css" />
+  <style>
+    @import url("../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", "Open Sans", Arial;
+      scroll-behavior: smooth;
+    }
+
+    /* navbar css start */
+
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      display: flex;
+      font-weight: bold;
+      margin-right: 25%;
+    }
+
+    .header-nav {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      background-color: rgb(252, 251, 252);
+      width: 100%;
+      z-index: 5;
+      position: fixed;
+    }
+
+    .active-nav a {
+      color: #f38a8a;
+      border-bottom: 3px solid #f38a8a;
+    }
+
+    .nav-head {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1350px;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    .navbar {
+      text-align: center;
+      align-items: center;
+      transition: all 0.5s;
+    }
+
+    .nav-menu li {
+      list-style: none;
+      padding: 0 1rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      margin: 0 auto;
+      text-align: center;
+      align-items: center;
+    }
+
+    a.nav-link {
+      color: black;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: 0.5s;
+    }
+
+    a.nav-link:hover {
+      color: rgb(59, 136, 187);
+    }
+
+    .navbar li :hover {
+      border-bottom: 2px solid rgb(10, 68, 104);
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .bar,
+    .fa-times {
+      width: 1.5rem;
+      height: 3px;
+      display: block;
+      color: black;
+      padding: 0;
+      margin: 6px;
+      transition: 0.5s;
+      background-color: black;
+    }
+
+    .bar:nth-child(1) {
+      width: 100%;
+    }
+
+    .bar:nth-child(2) {
+      width: 200%;
+    }
+
+    .bar:nth-child(3) {
+      width: 300%;
+    }
+
+    .logo img {
+      width: 90px;
+      box-shadow: 5px grey;
+      margin: 0px 30px;
+    }
+
+    .logo1 h2 {
+      padding-top: 26px;
+      font-size: 30px;
+      color: black;
+    }
+
+    .navbar li {
+      font-size: larger;
+      list-style: none;
+      margin: 1.6rem;
+    }
+
+    /* navbar css closed */
+    /*  about us section started */
+
+    body {
+      font-family: var(--body-font);
+      font-size: var(--normal-font-size);
+      background-color: var(--body-color);
+      color: var(--text-color);
+      transition: background-color 0.4s;
+      /* Pour le Dark theme */
+    }
+
+    :root {
+      --header-height: 3.5rem;
+
+      /*========== Colors ==========*/
+      /*Color mode HSL(hue, saturation, lightness)*/
+      --first-color: hsl(228, 52%, 74%);
+      --black-color: hsl(0, 0%, 0%);
+      --black-color-light: hsl(0, 0%, 40%);
+      --white-color: hsl(0, 0%, 95%);
+      --title-color: hsl(0, 0%, 0%);
+      --text-color: hsl(0, 0%, 35%);
+      --text-color-light: hsl(0, 0%, 64%);
+      --body-color: hsl(0, 0%, 87%);
+      --container-color: hsl(0, 0%, 83%);
+
+      /*========== Font and typography ==========*/
+      /*.5rem = 8px | 1rem = 16px ...*/
+      --body-font: "Bai Jamjuree", sans-serif;
+      --biggest-font-size: 2.5rem;
+      --h1-font-size: 1.75rem;
+      --h2-font-size: 1.25rem;
+      --h3-font-size: 1.125rem;
+      --normal-font-size: 0.938rem;
+      --small-font-size: 0.813rem;
+      --smaller-font-size: 0.75rem;
+
+      /*========== Font weight ==========*/
+      --font-regular: 400;
+      --font-medium: 500;
+      --font-semi-bold: 600;
+      --font-bold: 700;
+
+      /*========== z index ==========*/
+      --z-tooltip: 10;
+      --z-fixed: 100;
+    }
+
+    /*========== Responsive typography ==========*/
+    @media screen and (min-width: 1150px) {
+      :root {
+        --biggest-font-size: 4.5rem;
+        --h1-font-size: 3rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875rem;
+        --smaller-font-size: 0.813rem;
+      }
+    }
+
+    /*=============== BASE ===============*/
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--title-color);
+      font-weight: var(--font-bold);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /*=============== THEME ===============*/
+    .nav__buttons {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+    }
+
+    .change-theme {
+      font-size: 1.25rem;
+      color: var(--title-color);
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    /*=============== REUSABLE CSS CLASSES ===============*/
+    .container {
+      max-width: 1120px;
+      margin-inline: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .section {
+      padding-block: 4rem 2rem;
+    }
+
+    .section__title-1,
+    .section__title-2 {
+      position: relative;
+      font-size: var(--h1-font-size);
+      width: max-content;
+      margin: 0.75rem auto 2rem;
+    }
+
+    .section__title-1 span,
+    .section__title-2 span {
+      z-index: 5;
+      position: relative;
+    }
+
+    .section__title-1::after,
+    .section__title-2::after {
+      content: "";
+      width: 40px;
+      height: 28px;
+      background-color: var(--first-color);
+      position: absolute;
+      top: -4px;
+      right: -8px;
+    }
+
+    .section__title-2::after {
+      top: initial;
+      bottom: -4px;
+    }
+
+    .geometric-box {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: var(--first-color);
+      rotate: -30deg;
+    }
+
+    .geometric-box::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 3px solid var(--black-color);
+      left: -5px;
+      top: -5px;
+    }
+
+    .main {
+      overflow: hidden;
+      /* For animation ScrollReveal */
+    }
+
+    /*=============== BUTTON ===============*/
+    .button,
+    .button__ghost {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0.5rem;
+    }
+
+    .button {
+      background-color: var(--black-color);
+      padding: 1.1rem 1.5rem;
+      color: var(--white-color);
+      font-weight: var(--font-medium);
+      border-radius: 0.75rem;
+      transition: background-color 0.4s;
+    }
+
+    .button i {
+      font-size: 1.25rem;
+    }
+
+    .button:hover {
+      background-color: var(--first-color);
+    }
+
+    .button__ghost {
+      border: 3px solid var(--black-color);
+      color: var(--black-color);
+      padding: 0.5rem;
+      border-radius: 0.7rem;
+      transition: border 0.4s, color 0.4s;
+    }
+
+    .button__ghost i {
+      font-size: 1.25rem;
+    }
+
+    .button__ghost:hover {
+      border: 3px solid var(--first-color);
+    }
+
+    /*=============== Contact section start ===============*/
+    
+
+
+    .main-contact-section {
+      background-image: url(images/contact-page-background.avif);
+   
+      background-repeat: repeat;
+      background-size: cover;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      min-height: 800px;
+      padding: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form {
+      width: 100%;
+      max-width: 820px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+      z-index: 2;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-form {
+      background-color: #2197a7;
+
+      position: relative;
+    }
+
+    .circle {
+      border-radius: 50%;
+      background: linear-gradient(135deg, transparent 20%, #b2d1e6);
+      position: absolute;
+    }
+
+    .circle.one {
+      width: 130px;
+      height: 130px;
+      top: 130px;
+      right: -40px;
+    }
+
+    .circle.two {
+      width: 80px;
+      height: 80px;
+      top: 10px;
+      right: 30px;
+    }
+
+    .contact-form:before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background-color: #2197a7;
+
+      transform: rotate(45deg);
+      top: 50px;
+      left: -13px;
+    }
+
+    form {
+      padding: 2.3rem 2.2rem;
+      z-index: 10;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .title {
+      color: #fff;
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-bottom: 0.7rem;
+    }
+
+    .input-container {
+      position: relative;
+      margin: 1rem 0;
+    }
+
+    .input {
+      width: 100%;
+      outline: none;
+      border: 2px solid #fafafa;
+      background: none;
+      padding: 0.6rem 1.2rem;
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    textarea.input {
+      padding: 0.8rem 1.2rem;
+      min-height: 150px;
+      border-radius: 5px;
+      resize: none;
+      overflow-y: auto;
+    }
+
+    .input-container label {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      padding: 0 0.4rem;
+      color: #fafafa;
+      font-size: 0.9rem;
+      font-weight: 400;
+      pointer-events: none;
+      z-index: 1000;
+      transition: 0.5s;
+    }
+
+    .input-container.textarea label {
+      top: 1rem;
+      transform: translateY(0);
+    }
+
+    .btn {
+      padding: 0.6rem 1.3rem;
+      background-color: #fff;
+      border: 2px solid #fafafa;
+      font-size: 0.95rem;
+      color: #2197a7;
+
+      line-height: 1;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      margin: 0;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+
+    .input-container span {
+      position: absolute;
+      top: 0;
+      left: 25px;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      padding: 0 0.4rem;
+      color: transparent;
+      pointer-events: none;
+      z-index: 500;
+    }
+
+    .input-container span:before,
+    .input-container span:after {
+      content: "";
+      position: absolute;
+      width: 10%;
+      opacity: 0;
+      transition: 0.3s;
+      height: 5px;
+      background-color: #2197a7;
+
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .input-container span:before {
+      left: 50%;
+    }
+
+    .input-container span:after {
+      right: 50%;
+    }
+
+    .input-container.focus label {
+      top: 0;
+      transform: translateY(-50%);
+      left: 25px;
+      font-size: 0.8rem;
+    }
+
+    .input-container.focus span:before,
+    .input-container.focus span:after {
+      width: 50%;
+      opacity: 1;
+    }
+
+    .contact-info {
+      padding: 2.3rem 2.2rem;
+      position: relative;
+    }
+
+    .contact-info .title {
+      color: #2197a7;
+    }
+
+    .text {
+      color: #333;
+      margin: 1.5rem 0 2rem 0;
+    }
+
+    .information {
+      display: flex;
+      color: #555;
+      margin: 0.7rem 0;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .information i {
+      color: #2197a7;
+    }
+
+    .information a {
+      color: #555;
+    }
+
+    .icon {
+      width: 28px;
+      margin-right: 0.7rem;
+    }
+
+    .social-media {
+      padding: 2rem 0 0 0;
+    }
+
+    .social-media p {
+      color: #333;
+    }
+
+    .social-icons {
+      display: flex;
+      margin-top: 0.5rem;
+    }
+
+    .social-icons a {
+      width: 35px;
+      height: 35px;
+      border-radius: 5px;
+      background: linear-gradient(to bottom, #2391a7, #183f44);
+      color: #fff;
+      text-align: center;
+      line-height: 35px;
+      margin-right: 0.5rem;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.05);
+    }
+
+    .contact-info:before {
+      content: "";
+      position: absolute;
+      width: 110px;
+      height: 100px;
+      border: 22px solid #04343a;
+      border-radius: 50%;
+      bottom: -77px;
+      right: 50px;
+      opacity: 0.3;
+    }
+
+    .big-circle {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, #9be0ee, #183f44);
+      bottom: 50%;
+      right: 50%;
+      transform: translate(-40%, 38%);
+    }
+
+    .big-circle:after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      background-color: white;
+      border-radius: 50%;
+      top: calc(50% - 180px);
+      left: calc(50% - 180px);
+    }
+
+    .square {
+      position: absolute;
+      height: 400px;
+      top: 50%;
+      left: 50%;
+      transform: translate(181%, 11%);
+      opacity: 0.2;
+    }
+
+    /*Contact section closed  */
+
+    /* footer section closed */
+
+    :root {
+      --light: #ffffff;
+      --dark: #000;
+    }
+
+    .footer-container h3 {
+      font-family: sans-serif;
+      font-size: 1.3rem;
+      font-weight: 300;
+      /* text-align: center; */
+    }
+
+    .footer-container a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 400;
+      transition: 0.3s ease-in;
+      border-bottom: 1px solid transparent;
+      margin-bottom: 0.5rem;
+      display: inline-flex;
+    }
+
+    .footer-container a:hover {
+      border-bottom: 1px solid var(--dark);
+    }
+
+    .footer-container ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .footer-btn {
+      appearance: none;
+      border: 0;
+      background: transparent;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .footer_video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      border: none;
+    }
+
+    .footer_inner {
+      background: var(--light);
+      backdrop-filter: blur(50px);
+      border: 0.1px solid rgba(233, 232, 232, 0.208);
+      border-radius: 5px;
+      padding: 2rem;
+      margin: 1rem 0;
+    }
+
+    .footer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 480px;
+
+    }
+
+
+    .footer-container {
+
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 6rem 1rem;
+    }
+
+    .footer-form {
+      display: flex;
+      padding: 0%;
+      align-items: center;
+      justify-content: space-between;
+      width: min(100%, 400px);
+      border-bottom: 1px solid var(--dark);
+    }
+
+    .footer-container input {
+      padding: 0.75rem 0;
+      border: none;
+      background: none;
+      font-weight: 500;
+      transition: border 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      border-radius: 0;
+      width: 100%;
+      font-size: 1.05rem;
+      font-weight: bolder;
+    }
+
+    .footer-container input:focus {
+      outline: none;
+    }
+
+    .footer-container input::placeholder {
+      color: var(--dark);
+    }
+
+    @media (min-width: 675px) {
+      .layout {
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 2rem;
+      }
+
+      .w-50 {
+        width: 50%;
+      }
+
+      .w-25 {
+        width: 25%;
+      }
+    }
+
+    .footer_inner {
+      padding: 1rem;
+    }
+
+    .footer-svg {
+      margin: 0.5rem;
+    }
+
+    .c-2 {
+      margin-top: 3.5rem;
+    }
+
+    .footer_copyright {
+      color: var(--light);
+    }
+
+    .top-btn {
+      cursor: pointer;
+    }
+
+    /*footer section closed  */
+
+    /* media start */
+    /* navbar media start */
+
+    @media (max-width: 620px) {
+      .logo1 h2 {
+        display: none;
+      }
+
+      .logo {
+        margin-left: -25%;
+      }
+
+      .hamburger {
+        display: block;
+        margin-bottom: auto;
+        margin-top: auto;
+      }
+
+      .active .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(-315deg);
+        width: 300%;
+      }
+
+      .active .bar:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+        width: 300%;
+      }
+
+      .nav-menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        right: -100%;
+        transition: 0.5s;
+        margin: 0 auto;
+      }
+
+      .nav-menu li {
+        padding: 1rem 0;
+      }
+
+      a.nav-link {
+        font-weight: bolder;
+        margin: 1rem 0;
+        color: #fcf7f7;
+      }
+
+      .navbar li {
+        font-size: larger;
+        margin: 0rem;
+      }
+
+      .active {
+        /* top: 29%; */
+        right: 0;
+        z-index: 100;
+        transition: 0.2s ease;
+        backdrop-filter: blur(3px);
+        background-color: #00000091;
+      }
+
+      .logo {
+        margin-right: 25%;
+      }
+    }
+
+    @media (max-width: 1320px) {
+      .logo {
+        margin-right: 0%;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .logo {
+        margin-right: 25%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .navbar li {
+        margin: 1.2rem;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .navbar li {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      a.nav-link {
+        padding: 0.75rem 0;
+      }
+    }
+
+    /* navbar media closed */
+
+    /* contact section start   */
+
+
+    @media (max-width: 850px) {
+      .form {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info:before {
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
+      }
+
+      .contact-form:before {
+        top: -13px;
+        left: initial;
+        right: 70px;
+      }
+
+      .square {
+        transform: translate(140%, 43%);
+        height: 350px;
+      }
+
+      .big-circle {
+        bottom: 75%;
+        transform: scale(0.9) translate(-40%, 30%);
+        right: 50%;
+      }
+
+      .text {
+        margin: 1rem 0 1.5rem 0;
+      }
+
+      .social-media {
+        padding: 1.5rem 0 0 0;
+      }
+    }
+
+    @media (max-width: 990px) {
+      .container {
+        padding-top: 8rem;
+      }
+    }
+
+    @media (max-width: 855px) {
+      .container {
+        padding-top: 13rem;
+      }
+    }
+
+    @media (max-width: 625px) {
+      .container {
+        padding-top: 8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem;
+        padding-top: 6.5rem !important;
+      }
+
+      .contact-info:before {
+        display: none;
+      }
+
+      .square,
+      .big-circle {
+        display: none;
+      }
+
+      form,
+      .contact-info {
+        padding: 1.7rem 1.6rem;
+      }
+
+      .text,
+      .information,
+      .social-media p {
+        font-size: 0.8rem;
+      }
+
+      .title {
+        font-size: 1.15rem;
+      }
+
+      .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+
+      .icon {
+        width: 23px;
+      }
+
+      .input {
+        padding: 0.45rem 1.2rem;
+      }
+
+      .btn {
+        padding: 0.45rem 1.2rem;
+      }
+    }
+
+    /* contact section closed   */
+
+    /* media closed */
+  </style>
+
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class=" header-nav">
+    <div class="nav-head  ">
+      <div class="logo logo1 ">
+        <a href="index-2.html">
+          <img src="images/main-logo.jpg" alt="Attractify-Infotech Logo" />
+        </a>
+      </div>
+      <div class="navbar">
+        <ul class="nav-menu" id="nav-head1">
+          <li class="nav-item"><a href="index-2.html" class="nav-link" data-aos="fade-left">Home</a></li>
+          <li class="nav-item"><a href="index-2.html" class="nav-link" data-aos="fade-left"
+              data-aos="fade-left">Services</a></li>
+          <li class="nav-item"><a href="project.html" class="nav-link" data-aos="fade-left">Project</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link" data-aos="fade-left">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link" data-aos="fade-left">Contact</a></li>
+        </ul>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar closed -->
+  <!-- contact Section start -->
+  <div class="main-contact-section" id="Contact">
+
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="img/shape.html" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info" data-aos="fade-right">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+
+            Let's start a conversation! Reach out to us using the form or contact details listed.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <i class="fas fa-map-marker-alt"></i> &nbsp &nbsp
+
+              <p> Shahdara , Delhi-110032 </p>
+            </div>
+            <div class="information">
+              <i class="fas fa-envelope"></i> &nbsp &nbsp
+              <p> Deepak Rajput </p>
+
+            </div>
+            <div class="information">
+              <i class="fas fa-envelope"></i> &nbsp &nbsp
+              <p> Nikhil Lohiya</p>
+            </div>
+
+            <div class="information">
+              <i class="fas fa-phone"></i>&nbsp&nbsp
+              <p>
+                <a href="tel:8743046672">+91 8743046672 </a>
+              </p>
+            </div>
+            <div class="information">
+              <i class="fas fa-phone"></i>&nbsp&nbsp
+              <p>
+                <a href="tel:8376936748">+91 8376936748 </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/profile.php?id=61558529093502">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+
+              <a href="https://www.instagram.com/attractify_infotech_web?igsh=MTBuNDNoMWthZm9mOA%3D%3D">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/attractify-infotech-a11a79307?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B4mZ1JLBuTbid9jDSJgh1FQ%3D%3D">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form" data-aos="fade-left">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form method="post" name="google-sheet">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="Name" class="input" />
+              <label for="">Username</label>
+              <span>Username</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="Email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="Phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="Message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" name="submit" value="Submit" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact section closed -->
+
+  <!-- footer section start -->
+
+  <footer class="footer" id="Contact"> <img
+      src="images/footer-background.png" alt="" class="footer_video">
+
+
+    <div class="footer-container">
+      <div class="footer_inner">
+        <div class="c-footer">
+          <div class="layout">
+            <div class="layout_item w-50">
+              <div class="newsletter">
+                <h3 class="newsletter_title">
+                  <b> Unlock the full potential of your online presence with our comprehensive web
+                    development services.
+                    We design, build, and optimize websites tailored to your unique needs. Elevate
+                    your digital presence
+                    today.</b>
+                </h3>
+                <form action="#" class="footer-form">
+                  <input type="text" placeholder="Email Address">
+                  <button class="footer-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                      class="footer-svg">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div class="layout_item w-25">
+              <nav class="c-nav-tool">
+                <h4 class="c-nav-tool_title">Ask</h4>
+                <ul class="c-nav-tool_list">
+                  <li>
+                    <a href="contact.html" class="c-link">Details</a>
+                  </li>
+
+                  <li>
+                    <a href="project.html" class="c-link">projects </a>
+                  </li>
+
+                  <li>
+                    <a href="about.html" class="c-link">About Us</a>
+                  </li>
+                  <li>
+                    <a href="contact.html" class="c-link">Help</a>
+                  </li>
+                </ul>
+              </nav>
+
+            </div>
+
+            <div class="layout_item w-25">
+              <nav class="c-nav-tool">
+                <h4 class="c-nav-tool_title">Support</h4>
+                <ul class="c-nav-tool_list">
+
+                  <li class="c-nav-tool_item">
+                    <a href="index-2.html" class="c-link">Testimonials </a>
+                  </li>
+
+                  <li class="c-nav-tool_item">
+                    <a href="index-2.html" class="c-link">Help &amp; FAQ</a>
+                  </li>
+
+                  <li class="c-nav-tool_item">
+                    <a href="#" class="c-link">Terms &amp; Conditions</a>
+                  </li>
+
+                  <li class="c-nav-tool_item">
+                    <a href="#" class="c-link">Privacy Policy</a>
+                  </li>
+
+                  <li class="c-nav-tool_item">
+                    <a href="contact.html" class="c-link">Contact</a>
+                  </li>
+
+
+                </ul>
+              </nav>
+
+            </div>
+          </div>
+          <div class="layout c-2">
+            <div class="layout_item w-50">
+              <ul class="flex">
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="footer-svg"
+                    class="footer-svg">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 6.654a6.786 6.786 0 0 1 2.596 5.344A6.786 6.786 0 0 1 12 17.34a6.786 6.786 0 0 1-2.596-5.343A6.786 6.786 0 0 1 12 6.654zm-.87-.582A7.783 7.783 0 0 0 8.4 12a7.783 7.783 0 0 0 2.728 5.926 6.798 6.798 0 1 1 .003-11.854zm1.742 11.854A7.783 7.783 0 0 0 15.6 12a7.783 7.783 0 0 0-2.73-5.928 6.798 6.798 0 1 1 .003 11.854z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="footer-svg">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M1 4h22v2H1V4zm0 14h22v2H1v-2zm18.622-3.086l-.174-.87h-1.949l-.31.863-1.562.003c1.005-2.406 1.75-4.19 2.236-5.348.127-.303.353-.457.685-.455.254.002.669.002 1.245 0L21 14.912l-1.378.003zm-1.684-2.062h1.256l-.47-2.18-.786 2.18zM7.872 9.106l1.57.002-2.427 5.806-1.59-.001c-.537-2.07-.932-3.606-1.184-4.605-.077-.307-.23-.521-.526-.622-.263-.09-.701-.23-1.315-.419v-.16h2.509c.434 0 .687.21.769.64l.62 3.289 1.574-3.93zm3.727.002l-1.24 5.805-1.495-.002 1.24-5.805 1.495.002zM14.631 9c.446 0 1.01.138 1.334.267l-.262 1.204c-.293-.118-.775-.277-1.18-.27-.59.009-.954.256-.954.493 0 .384.632.578 1.284.999.743.48.84.91.831 1.378-.01.971-.831 1.929-2.564 1.929-.791-.012-1.076-.078-1.72-.306l.272-1.256c.656.274.935.361 1.495.361.515 0 .956-.207.96-.568.002-.257-.155-.384-.732-.702-.577-.317-1.385-.756-1.375-1.64C12.033 9.759 13.107 9 14.63 9z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="footer-svg">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path d="M15 17a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15zM2 2h4v20H2V2z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="footer-svg">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-6v2h2v-2h1a2.5 2.5 0 0 0 2-4 2.5 2.5 0 0 0-2-4h-1V6h-2v2H8v8h3zm-1-3h4a.5.5 0 1 1 0 1h-4v-1zm0-3h4a.5.5 0 1 1 0 1h-4v-1z" />
+                  </svg>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" class="footer-svg">
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M20.067 8.478c.492.88.556 2.014.3 3.327-.74 3.806-3.276 5.12-6.514 5.12h-.5a.805.805 0 0 0-.794.68l-.04.22-.63 3.993-.032.17a.804.804 0 0 1-.794.679H7.72a.483.483 0 0 1-.477-.558L7.418 21h1.518l.95-6.02h1.385c4.678 0 7.75-2.203 8.796-6.502zm-2.96-5.09c.762.868.983 1.81.752 3.285-.019.123-.04.24-.062.36-.735 3.773-3.089 5.446-6.956 5.446H8.957c-.63 0-1.174.414-1.354 1.002l-.014-.002-.93 5.894H3.121a.051.051 0 0 1-.05-.06l2.598-16.51A.95.95 0 0 1 6.607 2h5.976c2.183 0 3.716.469 4.523 1.388z" />
+                  </svg>
+                </li>
+              </ul>
+            </div>
+            <div class="layout_item w-25">
+              <ul class="flex">
+                <li>
+                  <a href="https://www.facebook.com/profile.php?id=61558529093502">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
+                      class="footer-svg">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wa.me/+918743046672">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="32" height="32"
+                      class="footer-svg">
+                      <path
+                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/attractify_infotech?igsh=MTBuNDNoMWthZm9mOA==">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"
+                      class="footer-svg">
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path
+                        d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div onclick="backToTop()" class="layout_item w-25 top-btn"
+              style="display:flex;justify-content: end;align-items: center;" id="myBtn" title="Go to top">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" class="footer-svg"
+                id="#Home">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm1 10h3l-4-4-4 4h3v4h2v-4z" />
+              </svg>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="footer_copyright">
+        <p>&copy; 2023 Attractify-Infotech Inc.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // google sheet data get code start
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwtto2dQRAE-eEveQlduU4XtVtG7W3I9TaGJGyGcD3oehh100FD0Yozh5uCivWqVF8VFA/exec';
+    const form = document.forms['google-sheet'];
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          if (response.ok) {
+            // Success message
+            alert("Thanks for contacting us! We will get back to you soon.");
+            // Reset the form after successful submission
+            form.reset();
+          } else {
+            // Error message
+            alert("Error occurred, please try again later.");
+          }
+        })
+        .catch(error => console.error('Error!', error.message));
+    });
+    // google sheet data get  code End
+  </script>
+  <script src="../cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // navbar js start
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-link").forEach((link) =>
+      link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      })
+    );
+
+    // 
+
+    // navbar js closed
+
+    const inputs = document.querySelectorAll(".input");
+
+    function focusFunc() {
+      let parent = this.parentNode;
+      parent.classList.add("focus");
+    }
+
+    function blurFunc() {
+      let parent = this.parentNode;
+      if (this.value == "") {
+        parent.classList.remove("focus");
+      }
+    }
+
+    inputs.forEach((input) => {
+      input.addEventListener("focus", focusFunc);
+      input.addEventListener("blur", blurFunc);
+    });
+
+
+    // aos animation
+    // aos animation start
+    AOS.init({
+      // offset: 80,
+      duration: 1200,
+
+    });
+
+
+    // top btn js start
+    //Get the button
+    let mybutton = document.getElementById("top-btn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    // top btn js end
+
+
+  </script>
+  <script src="header.html"></script>
+</body>
+
+
+</html>
